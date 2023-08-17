@@ -136,8 +136,26 @@ function initMap() {
 function sendEmailDefault() {
   var email = "halogjanssenangel@gmail.com";
   var subject = "For Test";
+
+  var name = document.getElementById('name');
+  var email = document.getElementById('email');    
   var message = document.getElementById('message');
+
+  var nameBody = name.value;
+  var emailBody = email.value;
   var msgBody = message.value;
-  window.open(`mailto:${email}?subject=${subject}&body=${msgBody}`);
+
+  if (nameBody == "") {
+    alert("Please fill out name.");
+    return false;
+  } else if (emailBody == "") {
+    alert("Please fill out email.");
+    return false;
+  } else if (msgBody == "") {
+    alert("Please fill out message.");
+    return false;
+  } else {
+      window.open(`mailto:${email}?subject=${subject}&body=${msgBody}`);
+  }
 }
 
