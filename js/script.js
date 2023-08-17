@@ -138,11 +138,11 @@ function sendEmailDefault() {
   var subject = "For Test";
 
   var name = document.getElementById('name');
-  var email = document.getElementById('email');    
+  var mail = document.getElementById('email');    
   var message = document.getElementById('message');
 
   var nameBody = name.value;
-  var emailBody = email.value;
+  var emailBody = mail.value;
   var msgBody = message.value;
 
   if (nameBody == "") {
